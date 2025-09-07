@@ -28,7 +28,9 @@ namespace WebApplication1.Controllers
                 Topic = result.Topic,
                 Partition = result.Partition.Value,
                 Offset = result.Offset.Value,
-                SizeInKB = message.Length / 1024
+                SizeInKB = message.Length / 1024,
+                Timestamp = result.Timestamp.UtcDateTime
+
             });
         }
     }
